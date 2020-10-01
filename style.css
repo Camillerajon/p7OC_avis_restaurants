@@ -1,0 +1,77 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  justify-content: center;
+  color: salmon;
+}
+
+p {
+  color: darkgoldenrod;
+}
+
+header {
+  background-color: rgb(77, 72, 72);
+  text-align: center;
+  width: 100%;
+  height: 90px;
+  border-style: ridge;
+}
+
+.filter{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+#map {
+  width: 60%;
+  height: auto;
+  background-color: grey;
+}
+
+#list {
+  width: 50%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+ul {
+  width: 100%;
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  color: brown;
+  border: black 1px solid;
+  margin: auto;
+  padding: 10px;
+}
+
+li:hover {
+  border:  black 4px solid;;
+}
+
+.checked {
+  color: orange;
+}
+
+footer {
+  background: rgb(77, 72, 72);
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  padding-top: 50px;
+  height: 50px;
+  border-style: ridge;
+}

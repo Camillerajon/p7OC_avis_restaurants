@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Restaurants' ratings</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            Where do you want to eat?
+        </h1>
+    </header>
+    <div class="filter">
+        <select name="filter-1" id="filter-1">
+            <option>0</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <select name="filter-2" id="filter-2">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+        </select>
+        <button id="btn-filter">Filter</button>
+    </div>
+        
+    <div class="container">
+        <div id="map"></div>
+        <div id="list">
+        </div>
+    </div>
+    <footer>
+        <p>
+            The End
+        </p>
+    </footer>
+
+    <script src="js/List.js"></script>
+    <script src="js/Marker.js"></script>
+    <script src="js/InfoWindow.js"></script>
+    <script src="js/Map.js"></script>
+    <script src="app.js"></script>
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPkFir7nmpEwtfukNlv-G7Lz3SGIPqC8g&callback=app">
+    </script>
+</body>
+
+</html>

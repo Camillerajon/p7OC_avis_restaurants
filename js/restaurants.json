@@ -1,31 +1,119 @@
-[{
-        "restaurantName": "Bronco",
-        "address": "39 Rue des Petites Écuries, 75010 Paris",
-        "lat": 48.8737815,
-        "long": 2.3501649,
-        "ratings": [{
-                "stars": 4,
-                "comment": "Un excellent restaurant, j'y reviendrai ! Par contre il vaut mieux aimer la viande."
-            },
-            {
-                "stars": 5,
-                "comment": "Tout simplement mon restaurant préféré !"
-            }
-        ]
-    },
-    {
-        "restaurantName": "Babalou",
-        "address": "4 Rue Lamarck, 75018 Paris",
-        "lat": 48.8865035,
-        "long": 2.3442197,
-        "ratings": [{
-                "stars": 5,
-                "comment": "Une minuscule pizzeria délicieuse cachée juste à côté du Sacré choeur !"
-            },
-            {
-                "stars": 3,
-                "comment": "J'ai trouvé ça correct, sans plus"
-            }
-        ]
-    }
+[
+  {
+    "restaurantName": "Ha noi beach",
+    "address": "138 Avenue Pierre Mendès France, 13008 Marseille",
+    "lat": 43.255854,
+    "long": 5.375817,
+    "ratings": [
+      {
+        "stars": 4,
+        "comment": "Un Endroit et personnel sympa, concept dépaysant au bord de mer"
+      },
+      {
+        "stars": 5,
+        "comment": "Tout simplement mon restaurant préféré !"
+      }
+    ]
+  },
+  {
+    "restaurantName": "La Rhumerie",
+    "address": "148 Avenue Pierre Mendès France, 13008 Marseille",
+    "lat": 43.254114,
+    "long": 5.375199,
+    "ratings": [
+      {
+        "stars": 5,
+        "comment": "En bord de mer,  les pieds dans le sable. Cocktails diverses et planches de charcuterie, de fromages etc... copieux. Bon accueil. Un agréable moment. Je recommande !"
+      },
+      {
+        "stars": 3,
+        "comment": "J'ai trouvé ça correct, sans plus"
+      }
+    ]
+  },
+
+  {
+    "restaurantName": "The red lion",
+    "address": "231 Avenue Pierre Mendès France, 13008 Marseille",
+    "lat": 43.25002,
+    "long": 5.375427,
+    "ratings": [
+      {
+        "stars": 4,
+        "comment": "Pub super sympa, bon moment entre amis, bonne ambiance cool, décontractée"
+      },
+      {
+        "stars": 5,
+        "comment": "Bonnes bières, service correct et poli.  De nombreuses places à l'intérieure et en terrasse."
+      }
+    ]
+  },
+
+  {
+    "restaurantName": "Café du rond point",
+    "address": "4 Boulevard Ferevoux, 13008 Marseille",
+    "lat": 43.252647,
+    "long": 5.376776,
+    "ratings": [
+      {
+        "stars": 4,
+        "comment": "Déjeuner tranquille au soleil. D'excellents conseils pour les vins italiens et cocktails pour un serveur professionnel et  sympa."
+      },
+      {
+        "stars": 3,
+        "comment": "Le café bellini a changé de propriétaires.  Vraiment déçue  de notre repas  . Un point positif la serveuse était très sympathique."
+      }
+    ]
+  },
+
+  {
+    "restaurantName": "Café Bellini",
+    "address": "Rond-point Henri Frenay, 13008 Marseille",
+    "lat": 43.254983,
+    "long": 5.377441,
+    "ratings": [
+      {
+        "stars": 3,
+        "comment": "Bel endroit . Parfois service tres long ou alors inversement service rapide et bâclé"
+      },
+      {
+        "stars": 1,
+        "comment": "Personnel aux abonnés absents. 45 min pour avoir 5 crêpes qui en fait sont surgelées ! Incroyable de voir ça "
+      }
+    ]
+  },
+
+  {
+    "restaurantName": "Gallo pizza",
+    "address": "37 Boulevard du Sablier, 13008 Marseille",
+    "lat": 43.252336,
+    "long": 5.382459,
+    "ratings": [
+      {
+        "stars": 4,
+        "comment": "Excellent accueil téléphonique Livraison rapide 👌🏼quant aux pizzas, elles sont de bonne qualité ! Bravo"
+      },
+      {
+        "stars": 5,
+        "comment": "Tout simplement la meilleure pizzeria au feu de bois du Sud de Marseille, au moins ! "
+      }
+    ]
+  },
+
+  {
+    "restaurantName": "Brasserie Manhattan",
+    "address": "215 Avenue Pierre Mendès France, 13008 Marseille",
+    "lat": 43.250431,
+    "long": 5.376338,
+    "ratings": [
+      {
+        "stars": 2,
+        "comment": "Les plats assez chers et un personnel en sous effectif"
+      },
+      {
+        "stars": 1,
+        "comment": "Les plats n'étaient pas bons. Mauvais rapport qualité prix. Passez votre chemin "
+      }
+    ]
+  }
 ]

@@ -8,13 +8,15 @@ class Marker {
    * @param {Objet} map La carte qui sera associé au marker
    * @param {Objet} infowindow L'infowindow qui sera associé au marker
    * @param {Object} data Les données des restaurants
+   * @param {Object} manager Le manager de l'application
    */
-  constructor(position, map, infoWindow, data) {
+  constructor(position, map, infoWindow, data, manager) {
     this.user = false;
     this.position = position;
     this.map = map;
     this.infoWindow = infoWindow;
     this.data = data;
+    this.manager = manager;
   }
 
   /**
@@ -26,18 +28,24 @@ class Marker {
     let marker = new google.maps.Marker({
       position: this.position,
       map: this.map,
+      animation: google.maps.Animation.DROP,
     });
 
-    marker.addListener("click", () => {
-  
-      let restaurantOpen = this.data.find(data => data.infoWindow.opened);
-      if(restaurantOpen != undefined) {
-        restaurantOpen.infoWindow.close();
-        restaurantOpen.infoWindow.opened = false;
-      }
-      
-      this.infoWindow.open(this.map, marker);
-      this.infoWindow.opened = true;
+    marker.addListener("click", async () => {
+      if (!marker.user) {
+        let restaurantOpen = this.data.find((data) => data.infoWindow.opened);
+
+        if (restaurantOpen != undefined) {
+          restaurantOpen.infoWindow.close();
+          restaurantOpen.infoWindow.opened = false;
+        }
+
+        await this.infoWindow.open(this.map, marker);
+
+        this.infoWindow.opened = true;
+
+        this.manager.hideFormComment();
+      } else this.infoWindow.open(this.map, marker);
     });
 
     return marker;

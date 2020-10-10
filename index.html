@@ -1,60 +1,95 @@
 <!DOCTYPE html>
 <html lang="fr">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://unpkg.com/nes.css@2.3.0/css/nes.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <title>Restaurants' ratings</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+  </head>
 
-<body>
+  <body>
     <header>
-        <h1>
-            Where do you want to eat?
-        </h1>
+      <h1>Where do you want to eat?</h1>
     </header>
     <div class="filter">
-        <select name="filter-1" id="filter-1">
-            <option>0</option>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
-        <select name="filter-2" id="filter-2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-        </select>
-        <button id="btn-filter">Filter</button>
+      <p>Filtrer les restaurants entre : </p>
+      <select name="filter-1" id="filter-1">
+        <option>0</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+      <p>et</p>
+      <select name="filter-2" id="filter-2">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+      <p>étoile(s)</p>
+      <button id="btn-filter" onclick="filter()">Valider</button>
     </div>
-        
+
     <div class="container">
-        <div id="map"></div>
-        <div id="list">
-        </div>
+      <div id="map"></div>
+      <div id="list"></div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form class="form-add-restaurant">
+          <h3>Ajouter un restaurant</h3>
+          <div>
+            <label for="name">Nom :</label>
+            <input type="text" id="name" name="restaurant_name" />
+          </div>
+          <div>
+            <label for="address"> Adresse :</label>
+            <input type="text" id="address" name="restaurant_address" />
+          </div>
+
+          <div>
+            <label for="rating">Note :</label>
+            <select id="stars-select" class="starsNumberForm">
+              <option>0</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div>
+            <label for="msg">Message :</label>
+            <textarea id="msg" name="user_message"></textarea>
+          </div>
+
+          <div class="button">
+            <button class="submitForm" type="submit" style="display: none;">Confirmer votre ajout de restaurant</button>
+            <button class="validForm">Valider</button>
+          </div>
+        </form>
+      </div>
     </div>
     <footer>
-        <p>
-            The End
-        </p>
+      <p>The End</p>
     </footer>
 
     <script src="js/List.js"></script>
     <script src="js/Marker.js"></script>
     <script src="js/InfoWindow.js"></script>
     <script src="js/Map.js"></script>
+    <script src="js/Manager.js"></script>
     <script src="app.js"></script>
-    <script defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPkFir7nmpEwtfukNlv-G7Lz3SGIPqC8g&callback=app">
-    </script>
-</body>
-
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPkFir7nmpEwtfukNlv-G7Lz3SGIPqC8g&callback=app"></script>
+  </body>
 </html>

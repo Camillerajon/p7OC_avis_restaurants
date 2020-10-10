@@ -2,6 +2,7 @@ html,
 body {
   margin: 0;
   padding: 0;
+  font-family: "Lato", sans-serif;
 }
 
 h1 {
@@ -21,12 +22,26 @@ header {
   border-style: ridge;
 }
 
-.filter{
+.filter {
   width: 100%;
   height: 50px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
+
+.filter select {
+  height: 25px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.filter button {
+  margin-left: 10px;
+}
+
 .container {
   display: flex;
   min-height: 100vh;
@@ -48,6 +63,7 @@ header {
 ul {
   width: 100%;
   padding: 0;
+  margin-top: 0;
 }
 
 li {
@@ -56,14 +72,108 @@ li {
   border: black 1px solid;
   margin: auto;
   padding: 10px;
+  cursor: pointer;
 }
 
 li:hover {
-  border:  black 4px solid;;
+  border: black 4px solid;
 }
 
 .checked {
   color: orange;
+}
+
+.infoWindow button {
+  border: none;
+  background-color: brown;
+  color: white;
+}
+
+.add-comments {
+  display: none;
+  flex-direction: column;
+  padding: 5px 5px 5px 5px;
+}
+
+.add-comments select {
+  width: 50px;
+  border: 1px solid brown;
+  margin-left: 10px;
+}
+
+.select-stars {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+hr {
+  width: 120px;
+  height: 1px;
+  background-color: brown;
+  border: none;
+}
+
+.add-comments textarea {
+  padding: 5px 5px 5px 5px;
+  border: 1px solid brown;
+  margin-bottom: 10px;
+}
+
+.comments {
+  width: 300px;
+}
+
+#btn-validate {
+  border: none;
+  background-color: brown;
+  color: white;
+}
+
+.thanks {
+  display: none;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content h3 {
+  text-align: center;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 footer {
@@ -74,4 +184,91 @@ footer {
   padding-top: 50px;
   height: 50px;
   border-style: ridge;
+}
+
+form {
+  margin: 0 auto;
+  width: 500px;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 1em;
+}
+
+form div + div {
+  margin-top: 1em;
+}
+
+form label {
+  /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
+  display: inline-block;
+  width: 90px;
+  text-align: right;
+  color: #000000;
+  font-weight: 700;
+}
+
+form input,
+textarea {
+  /* Pour s'assurer que tous les champs texte ont la même police.
+     Par défaut, les textarea ont une police monospace */
+  font: 1em sans-serif;
+
+  /* Pour que tous les champs texte aient la même dimension */
+  width: 350px;
+  box-sizing: border-box;
+
+  /* Pour harmoniser le look & feel des bordures des champs texte */
+  border: 1px solid #999;
+  border-radius: 3px;
+}
+
+form input:focus,
+textarea:focus {
+  /* Pour souligner légèrement les éléments actifs */
+  outline: #2bbee7 auto 3px;
+}
+
+form textarea {
+  /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
+  vertical-align: top;
+
+  /* Pour donner assez de place pour écrire du texte */
+  height: 5em;
+}
+
+.input_invalid {
+  border: 1px solid red !important;
+}
+
+.input_valid {
+  border: 1px solid #5fa550 !important;
+}
+
+form .button {
+  /* Pour placer le bouton à la même position que les champs texte */
+  padding-left: 90px; /* même taille que les étiquettes */
+}
+
+form button {
+  /* Cette marge supplémentaire représente grosso modo le même espace que celui
+     entre les étiquettes et les champs texte */
+  width: 354px;
+  border: 1px solid #e7542b;
+  background-color: #e7542b;
+  border-radius: 3px;
+  color: #fff;
+  opacity: 0.6;
+  padding: 10px;
+  font-size: 100%;
+  cursor: pointer;
+}
+
+#btn-filter {
+  border: 1px solid #e7542b;
+  background-color: #e7542b;
+  padding: 10px;
+  border-radius: 3px;
+  color: #fff;
+  opacity: 0.6;
+  cursor: pointer;
 }

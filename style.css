@@ -22,6 +22,10 @@ header {
   border-style: ridge;
 }
 
+/*
+*Filtre des restaurants
+*/
+
 .filter {
   width: 100%;
   height: 50px;
@@ -33,6 +37,8 @@ header {
 }
 
 .filter select {
+  padding: 2px;
+  border-radius: 5px;
   height: 25px;
   margin-left: 5px;
   margin-right: 5px;
@@ -41,6 +47,10 @@ header {
 .filter button {
   margin-left: 10px;
 }
+
+/*
+* Affichage de la carte
+*/
 
 .container {
   display: flex;
@@ -53,8 +63,12 @@ header {
   background-color: grey;
 }
 
+/*
+* Affichage de la liste
+*/
+
 #list {
-  width: 50%;
+  width: 40%;
   height: auto;
   display: flex;
   justify-content: center;
@@ -68,10 +82,10 @@ ul {
 
 li {
   list-style-type: none;
-  color: brown;
-  border: black 1px solid;
+  color: black;
+  border: grey 1.5px solid;
   margin: auto;
-  padding: 10px;
+  padding: 20px;
   cursor: pointer;
 }
 
@@ -79,14 +93,41 @@ li:hover {
   border: black 4px solid;
 }
 
-.checked {
-  color: orange;
+/*
+* Affichage de l'infoWindow d'un restaurant
+* et du formulaire pour rajouter un commentaire
+*/
+.infoWindow {
+  display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 305px;
+    align-items: center;
+}
+
+.infoWindow .textarea {
+  width: auto;
+  height: 70px;
+}
+
+.stars {
+  margin: 1px;
+  font-size: 1.5em;
 }
 
 .infoWindow button {
-  border: none;
-  background-color: brown;
-  color: white;
+  width: 100%;
+  border: 1px solid #e7542b;
+  background-color: #e7542b;
+  border-radius: 3px;
+  color: #fff;
+  opacity: 0.6;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  text-align: center;
 }
 
 .add-comments {
@@ -97,7 +138,7 @@ li:hover {
 
 .add-comments select {
   width: 50px;
-  border: 1px solid brown;
+  border: 1px solid salmon;
   margin-left: 10px;
 }
 
@@ -109,13 +150,13 @@ li:hover {
 hr {
   width: 120px;
   height: 1px;
-  background-color: brown;
+  background-color: salmon;
   border: none;
 }
 
 .add-comments textarea {
   padding: 5px 5px 5px 5px;
-  border: 1px solid brown;
+  border: 1px solid grey;
   margin-bottom: 10px;
 }
 
@@ -123,45 +164,46 @@ hr {
   width: 300px;
 }
 
-#btn-validate {
-  border: none;
-  background-color: brown;
-  color: white;
-}
 
 .thanks {
   display: none;
 }
 
-/* The Modal (background) */
+/*
+* Affichage du modal de création d'un nouveau restaurant
+*/
+
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed;
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Modal Content/Box */
+/* Contenu du modal */
+
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
   border-radius: 5px;
-  width: 50%; /* Could be more or less, depending on screen size */
+  max-width: 650px;
 }
 
-.modal-content h3 {
+.modal-content h2 {
   text-align: center;
+  font-weight: bolder;
+  color: salmon;
 }
 
-/* The Close Button */
+/* Le bouton de fermeture */
 .close {
   color: #aaa;
   float: right;
@@ -176,32 +218,22 @@ hr {
   cursor: pointer;
 }
 
-footer {
-  background: rgb(77, 72, 72);
-  text-align: center;
-  bottom: 0;
-  width: 100%;
-  padding-top: 50px;
-  height: 50px;
-  border-style: ridge;
-}
-
+/*
+* Formulaire d'ajout du restaurant
+*/
 form {
-  margin: 0 auto;
-  width: 500px;
+  margin: auto;
   padding: 1em;
-  border: 1px solid #ccc;
   border-radius: 1em;
 }
 
 form div + div {
   margin-top: 1em;
+  box-sizing: inherit;
 }
 
 form label {
   /* Pour être sûrs que toutes les étiquettes ont même taille et sont correctement alignées */
-  display: inline-block;
-  width: 90px;
   text-align: right;
   color: #000000;
   font-weight: 700;
@@ -209,30 +241,27 @@ form label {
 
 form input,
 textarea {
-  /* Pour s'assurer que tous les champs texte ont la même police.
-     Par défaut, les textarea ont une police monospace */
+  width: 100%;
+  height: 40px;
   font: 1em sans-serif;
-
-  /* Pour que tous les champs texte aient la même dimension */
-  width: 350px;
-  box-sizing: border-box;
-
-  /* Pour harmoniser le look & feel des bordures des champs texte */
   border: 1px solid #999;
   border-radius: 3px;
+  margin-top: 5px;
 }
 
 form input:focus,
 textarea:focus {
-  /* Pour souligner légèrement les éléments actifs */
-  outline: #2bbee7 auto 3px;
+  outline: darkgoldenrod auto 3px;
+  box-sizing: inherit;
+}
+
+#rating {
+  padding: 5px;
+  margin: 1px;
 }
 
 form textarea {
-  /* Pour aligner les champs texte multi‑ligne avec leur étiquette */
   vertical-align: top;
-
-  /* Pour donner assez de place pour écrire du texte */
   height: 5em;
 }
 
@@ -245,25 +274,27 @@ form textarea {
 }
 
 form .button {
-  /* Pour placer le bouton à la même position que les champs texte */
-  padding-left: 90px; /* même taille que les étiquettes */
+  margin: auto;
+  margin-top: 1em;
 }
 
 form button {
-  /* Cette marge supplémentaire représente grosso modo le même espace que celui
-     entre les étiquettes et les champs texte */
-  width: 354px;
+  width: 101%;
   border: 1px solid #e7542b;
   background-color: #e7542b;
   border-radius: 3px;
   color: #fff;
   opacity: 0.6;
+  margin-left: auto;
+  margin-right: auto;
   padding: 10px;
   font-size: 100%;
   cursor: pointer;
+  text-align: center;
 }
 
 #btn-filter {
+  display: none;
   border: 1px solid #e7542b;
   background-color: #e7542b;
   padding: 10px;
@@ -271,4 +302,57 @@ form button {
   color: #fff;
   opacity: 0.6;
   cursor: pointer;
+}
+
+#search {
+  width: 100%;
+  border: 1px solid #e7542b;
+  background-color: #e7542b;
+  border-radius: 3px;
+  color: #fff;
+  opacity: 0.6;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  font-size: 1.5em;
+  cursor: pointer;
+  text-align: center;
+}
+
+/*
+* Affichage du footer
+*/
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(77, 72, 72);
+  color: #fff;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  border-style: ridge;
+}
+
+@media (max-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #map {
+    width: 100%;
+    height: 500px;
+  }
+
+  #list {
+    width: 100%;
+    height: auto;
+  }
+
+  .modal-content {
+    width: 75%;
+  }
 }

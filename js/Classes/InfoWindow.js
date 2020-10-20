@@ -5,8 +5,7 @@ class InfoWindow {
   /**
    * Crée une infoWindow
    * @param {Object || String} data Le contenu complet d'un restaurant (nom, adresse, lat etc...),
-   *                                  ou une chaîne de caractère si c'est l'infowindow de l'utilisateur
-   * @param {Boolean} opened Renvoie False si l'infoWindow est fermé, True si elle est ouverte
+   *                                  ou une chaîne de caractères si c'est l'infowindow de l'utilisateur
    * @param {Object} mapManager Le manager de l'application
    */
   constructor(data, manager) {
@@ -16,9 +15,9 @@ class InfoWindow {
   }
 
   /**
-   * Création du contenu de l'infowindow
+   * Création du contenu de l'infowindow avec un objet restaurant OU une chaîne de caractères  
    */
-  createContent() {
+  createInfoWindow() {
     let infoWindow = new google.maps.InfoWindow({});
     if (typeof this.data === "object") {
       let comments = this.data.ratings.map((rating) => {

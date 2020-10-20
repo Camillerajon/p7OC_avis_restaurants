@@ -10,21 +10,21 @@ class List {
   constructor(data, map) {
     this.data = data;
     this.map = map;
-    this.container = document.getElementById("list");
+    this.listContainer = document.getElementById("list");
     this.ul = document.createElement("ul");
     this.manager = this.manager;
   }
 
   /**
-   * Création de la liste des restaurants à droite et affichage des restaurants filtrés
+   * Insertion d'un restaurant à droite et affichage
+   * @param {Object} restaurant Un restaurant
    */
-  addLi(array) {
-    array.map((restaurant) => {
+  addLi(restaurant) {   
       let li = document.createElement("li");
       li.innerHTML = restaurant.restaurantName;
 
       this.ul.appendChild(li);
-      this.container.appendChild(this.ul);
+      this.listContainer.appendChild(this.ul);
 
       li.addEventListener("click", async () => {
         let restaurantOpen = this.data.find((data) => data.infoWindow.opened);
@@ -42,13 +42,5 @@ class List {
       });
 
       restaurant.li = li;
-    });
-  }
-
-  /**
-   * Rajoute un nouveau restaurant dans la liste
-   */
-  addRestaurantInList() {
-
   }
 }

@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-    <title>Restaurants' ratings</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+    <title>Avis et restaurants</title>
   </head>
 
   <body>
     <header>
-      <h1>Where do you want to eat?</h1>
+      <h1>Avis et restaurants !</h1>
     </header>
     <div class="filter">
-      <p>Filtrer les restaurants entre : </p>
-      <select name="filter-1" id="filter-1">
-        <option>0</option>
+      <p>Filtrer les restaurants entre :</p>
+      <select name="filter-1" id="filter-1" onchange="selectOnChange()">
+        <option></option>
         <option>1</option>
         <option>2</option>
         <option>3</option>
@@ -25,15 +24,12 @@
         <option>5</option>
       </select>
       <p>et</p>
-      <select name="filter-2" id="filter-2">
-        <option>1</option>
-        <option>2</option>
-        <option>3</option>
-        <option>4</option>
-        <option>5</option>
-      </select>
+      <select name="filter-2" id="filter-2" onchange="selectOnChange()"></select>
       <p>étoile(s)</p>
       <button id="btn-filter" onclick="filter()">Valider</button>
+    </div>
+    <div>
+      <button id="search" onclick="search()">Chercher des restaurants</button>
     </div>
 
     <div class="container">
@@ -47,7 +43,7 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <form class="form-add-restaurant">
-          <h3>Ajouter un restaurant</h3>
+          <h2>Ajouter un restaurant</h2>
           <div>
             <label for="name">Nom :</label>
             <input type="text" id="name" name="restaurant_name" />
@@ -59,7 +55,7 @@
 
           <div>
             <label for="rating">Note :</label>
-            <select id="stars-select" class="starsNumberForm">
+            <select id="rating" class="starsNumberForm">
               <option>0</option>
               <option>1</option>
               <option>2</option>
@@ -74,22 +70,27 @@
           </div>
 
           <div class="button">
-            <button class="submitForm" type="submit" style="display: none;">Confirmer votre ajout de restaurant</button>
+            <button class="submitForm" type="submit" style="display: none">Confirmer votre ajout de restaurant</button>
             <button class="validForm">Valider</button>
           </div>
         </form>
       </div>
     </div>
     <footer>
-      <p>The End</p>
+      Site réalisé par Camille Rajon<br>
+      Copyright &copy;
+      <script type="text/javascript">
+        document.write("2020 - " + new Date().getFullYear());
+      </script>
+      tonAdresse.com
     </footer>
 
-    <script src="js/List.js"></script>
-    <script src="js/Marker.js"></script>
-    <script src="js/InfoWindow.js"></script>
-    <script src="js/Map.js"></script>
-    <script src="js/Manager.js"></script>
-    <script src="app.js"></script>
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPkFir7nmpEwtfukNlv-G7Lz3SGIPqC8g&callback=app"></script>
+    <script src="js/Classes/List.js"></script>
+    <script src="js/Classes/Marker.js"></script>
+    <script src="js/Classes/InfoWindow.js"></script>
+    <script src="js/Classes/Map.js"></script>
+    <script src="js/Classes/Manager.js"></script>
+    <script src="js/app.js"></script>
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPkFir7nmpEwtfukNlv-G7Lz3SGIPqC8g&libraries=places&callback=app"></script>
   </body>
 </html>

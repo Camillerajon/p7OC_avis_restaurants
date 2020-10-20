@@ -11,7 +11,8 @@
                 "stars": 5,
                 "comment": "Tout simplement mon restaurant préféré !"
             }
-        ]
+        ],
+        "personalData": true
     },
     {
         "restaurantName": "La Rhumerie",
@@ -26,7 +27,8 @@
                 "stars": 3,
                 "comment": "J'ai trouvé ça correct, sans plus"
             }
-        ]
+        ],
+        "personalData": true
     },
 
     {
@@ -42,7 +44,8 @@
                 "stars": 5,
                 "comment": "Bonnes bières, service correct et poli.  De nombreuses places à l'intérieure et en terrasse."
             }
-        ]
+        ],
+        "personalData": true
     },
 
     {
@@ -58,7 +61,8 @@
                 "stars": 3,
                 "comment": "Le café bellini a changé de propriétaires.  Vraiment déçue  de notre repas  . Un point positif la serveuse était très sympathique."
             }
-        ]
+        ],
+        "personalData": true
     },
 
     {
@@ -74,7 +78,8 @@
                 "stars": 1,
                 "comment": "Personnel aux abonnés absents. 45 min pour avoir 5 crêpes qui en fait sont surgelées ! Incroyable de voir ça "
             }
-        ]
+        ],
+        "personalData": true
     },
 
     {
@@ -90,7 +95,8 @@
                 "stars": 5,
                 "comment": "Tout simplement la meilleure pizzeria au feu de bois du Sud de Marseille, au moins ! "
             }
-        ]
+        ],
+        "personalData": true
     },
 
     {
@@ -106,6 +112,7 @@
                 "stars": 1,
                 "comment": "Les plats n'étaient pas bons. Mauvais rapport qualité prix. Passez votre chemin "
             }
-        ]
+        ],
+        "personalData": true
     }
 ]
